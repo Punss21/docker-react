@@ -11,3 +11,21 @@ before_install:
 #series of command which needs tob e run for tests
 script:
   - docker run -e CI=true punss21/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-867669335535"
+
+  #by default it would be same as the app name. Cause on very first time folder wont be get displayed
+  bucket_path: "docker-react"
+
+  #any time we push code to branch it all need to be in action
+  on:
+    branch: master
+
+    # fetch keys from local environment
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: "$AWS_SECRET_KEY"
