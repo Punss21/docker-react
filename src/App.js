@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to.
+          Edit <code>src/App.js</code> when implemented with feature branch..
         </p>
         <a
           className="App-link"
