@@ -14,10 +14,10 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "ap-south-1"
   app: "docker-react"
   env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-867669335535"
+  bucket_name: "elasticbeanstalk-ap-south-1-867669335535"
 
   #by default it would be same as the app name. Cause on very first time folder wont be get displayed
   bucket_path: "docker-react"
